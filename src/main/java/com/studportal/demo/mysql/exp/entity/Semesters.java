@@ -17,6 +17,32 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 @AllArgsConstructor 
 public class Semesters {
+	
+	
+	public int getSemester_id() {
+		return semester_id;
+	}
+
+	public void setSemester_id(int semester_id) {
+		this.semester_id = semester_id;
+	}
+
+	public String getName() {
+		return Name;
+	}
+
+	public void setName(String name) {
+		Name = name;
+	}
+
+	public Branches getBranch() {
+		return branch;
+	}
+
+	public void setBranch(Branches branch) {
+		this.branch = branch;
+	}
+
 	@Id
 	@Column(name = "semester_id")
 	@GeneratedValue
