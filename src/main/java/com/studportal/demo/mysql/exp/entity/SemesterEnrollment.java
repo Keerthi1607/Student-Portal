@@ -49,13 +49,16 @@ public class SemesterEnrollment {
 	@GeneratedValue
 	private int enrollment_id;
 	
-	@ManyToOne
-    @JoinColumn(name = "semester_id", referencedColumnName = "semester_id")
-	private Semesters semester;
+	
 	
 	@ManyToOne
     @JoinColumn(name = "student_id", referencedColumnName = "student_id")
 	private Students student;
+	
+	@ManyToOne
+    @JoinColumn(name = "semestername", referencedColumnName = "semestername",unique=true)
+	private Semesters semester;
+	
 
 
 

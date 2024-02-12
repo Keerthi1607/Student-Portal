@@ -17,6 +17,7 @@ public class BranchService {
 	
 	//post
 	private BranchRepo branchrepo;
+	
 	public Branches branchdetails(Branches branches) {
 		return branchrepo.save(branches);	
 	}
