@@ -17,12 +17,13 @@ import lombok.NoArgsConstructor;
 	@NoArgsConstructor
 	@AllArgsConstructor 
 	public class Subjects {
-		public int getSemester_id() {
-			return semester_id;
+		
+		public int getSubject_id() {
+			return subject_id;
 		}
 
-		public void setSemester_id(int semester_id) {
-			this.semester_id = semester_id;
+		public void setSubject_id(int subject_id) {
+			this.subject_id = subject_id;
 		}
 
 		public String getName() {
@@ -33,25 +34,25 @@ import lombok.NoArgsConstructor;
 			Name = name;
 		}
 
-		public Semesters getSemester() {
-			return semester;
+		public Semesters getSemester_id() {
+			return semester_id;
 		}
 
-		public void setSemester(Semesters semester) {
-			this.semester = semester;
+		public void setSemester_id(Semesters semester_id) {
+			this.semester_id = semester_id;
 		}
 
 		@Id
 		@Column(name = "subject_id")
 		@GeneratedValue
-		private int semester_id;
+		private int subject_id;
 		
 		@Column(name = "subjectname")
 		private String Name;
 
 		@ManyToOne
 	    @JoinColumn(name = "semester_id", referencedColumnName = "semester_id")
-		private Semesters semester;
+		private Semesters semester_id;
 		
 
 	}
